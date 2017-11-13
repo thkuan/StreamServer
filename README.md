@@ -4,7 +4,7 @@
 [**ffserver**](https://www.ffmpeg.org/ffserver.html)
 [**ffmpeg**](https://www.ffmpeg.org/ffmpeg.html)
 
-![Behavior Description](./ffserver and ffmpeg.png)
+![Behavior Description](./ffserver%20and%20ffmpeg.png)
 
 ## Running the test
 
@@ -22,4 +22,9 @@ ffserver -f ffserver.conf
 ### Encode live video/audio stream to ffserver
 ``` sh
 ffmpeg -f video4linux2 -pixel_format bgr24 -video_size vga -i /dev/video0 http://localhost:8090/webcam.ffm
+```
+
+## Browse and view the stream
+```
+http://$(dev_ip):$(dev_port)/facstream.mjpeg
 ```
